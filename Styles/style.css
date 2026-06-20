@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #f8d7da, #fff8f0);
+  text-align: center;
+}
+
+.home h1 {
+  width: 80%;
+  color: #7a4b52;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.home img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 20px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.home button {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 0px;
+  background: #d89ca4;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.home button:hover {
+  transform: scale(1.05);
+}
+
+.invitation {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+
+  overflow-y: auto;
+  padding: 40px 0;
+
+  background: linear-gradient(135deg, #fff8f0, #f8d7da);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+}
+
+.invitation.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* CARD */
+.card {
+  width: 90%;
+  max-width: 400px;
+
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.h2 {
+  font-size: 60px;
+  color: #c47b85;
+  margin: 10px 0;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.card h3 {
+  color: brown;
+  font-size: 28px;
+}
+
+.p p {
+  color: #5c3d42;
+  line-height: 1.85;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 10px;
+  font-style: italic;
+  direction: rtl;
+  font-family: "Segoe UI", "Tahoma", "Arial", sans-serif;
+}
+
+.accordion {
+  width: 90%;
+  max-width: 500px;
+}
+/* Countdown */
+.countdown {
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.countdown h3 {
+  color: #c47b85;
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* .time-box {
+  background: #fff8f0;
+  padding: 12px 10px;
+  border-radius: 12px;
+  min-width: 70px;
+  box-shadow: 0 4px 15px rgba(196, 123, 133, 0.15);
+} */
+
+@media (max-width: 500px) {
+  .home h1 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  .home img {
+    width: 88%;
+    margin: 15px 0 25px;
+  }
+  .home p {
+    font-style: italic;
+    font-size: 25px;
+  }
+
+  .envelope {
+    width: 260px;
+    height: 165px;
+    margin: 30px auto;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .card h3 {
+    font-size: 1.45rem;
+  }
+
+  .item h3 {
+    font-size: 1.5rem;
+  }
+
+  .p p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-size: 25px;
+    line-height: 1.9;
+    padding: 0 5px;
+  }
+  .time-box {
+    min-width: 65px;
+    padding: 10px 8px;
+  }
+
+  .number {
+    font-size: 1.85rem;
+  }
+  .invitation h2 {
+    font-style: italic;
+    font-size: 60px;
+    font-weight: 600;
+    color: rgba(112, 21, 21, 0.884);
+  }
+  .invitation p {
+    font-size: 24px;
+  } 
+  .Images img {
+    width: 200px;
+    height: 300px;
+    border-radius: 50%;
+  }
+  .Images{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}    
+.img-left,
+.img-right{
+    opacity: 0;
+}
+
+.invitation.show .img-left{
+    animation: fromLeft 2s ease forwards;
+}
+
+.invitation.show .img-right{
+    animation: fromRight 2s ease forwards;
+}
+
+@keyframes fromLeft{
+    from{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromRight{
+    from{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+      
+  .Names h3 {
+    word-spacing: 30px;
+    margin: auto;
+    font-size: 40px;
+    color: rgba(112, 21, 21, 0.884);
+  }
+  .time-box .number {
+    font-size: 50px;
+    font-weight: 700;
+    color: #7a4b52;
+    line-height: 1;
+  }
+  .label {
+    display: block;
+    font-size: 24px;
+    color: #4b1a1a;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .invitation {
+    /* background-image: url('../Images/f818353a36e6c61f08c20344c6138447.jpg');
+  position: relative;
+  position: relative;
+  min-height: 100vh;    
+  background-size: cover;              
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; */
+    background-color: pink;
+  }
+  .invitation::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(248, 215, 218, 0.75);
+    z-index: 1;
+  }
+  .invitation > * {
+    position: relative;
+    z-index: 2;
+  }
+  .location{
+    display:flex;
+    width:80%;
+    margin:10px 10px 0px 50px;
+    padding:10px;
+    background: rgba(165, 42, 42, 0.432);
+    border:1px solid black;
+  }
+  .location-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    text-decoration: none; 
+    transition: all 0.3s ease;
+    font-size: 50px;
+    background: pink;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    padding: 15px;
+  }
+  .location-link:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(196, 123, 133, 0.2);
+  }
+  .location p{
+    margin: 25px 0px 0px 20px;
+    font-size: 24px;
+    color: #030303; 
+    font-weight: 500; 
+    text-transform: uppercase;
+  }
+  .location-link i.fa-location-dot {
+    font-size: 48px;
+    color: brown;
+  }
+  .message h3 {
+    font-size: 30px;
+    color: rgb(71, 15, 15);
+  }
+  .Date {
+    width: 90%;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: rgb(134, 115, 115) solid 1px;
+    border-radius: 40px;
+    padding: 20px 0;
+  } 
+  .Date h2 {
+    margin-left: 90px;
+    font-weight: 700;
+    font-size: 50px;
+    color: rgba(163, 23, 23, 0.753);
+    font-style: italic;
+    text-transform:capitalize;
+  }
+  .Date h5 {
+    margin-top: 20px;
+    margin-left: 80px; 
+    color: #4b1a1a;
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .Date .Numbers {
+    display: flex; 
+    justify-content: center; 
+    gap:30px;
+    padding-top: 30px;
+  }
+  .Date .Numbers :nth-of-type(2){
+    transform: scale(1.6); 
+    text-decoration:underline;
+  }
+  .Date .Numbers p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #7a4b52;
+    margin: 10px 10px; 
+  }
+  .month p{
+    font-size: 30px;
+    font-weight: 700;
+    color: #4b1a1a;
+    padding-left:200px; 
+  }
+  .line{
+    background-color:rgba(165, 42, 42, 0.384);
+    border:none;
+    height:3px;
+    margin:20px 10px; 
+  }
+  .Together{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:20px;
+  }
+  .Together img{
+    width:400px;
+    height:700px;
+    border-radius:200px;
+    border:3px solid rgba(170, 74, 74, 0.342);
+  }
+  .Together p{
+    font-size: 40px;
+    font-weight: 700;
+    color: #4b1a1a;
+    margin-top: 20px;
+    font-style:italic;
+    margin-left:40px;
+  }
+}
